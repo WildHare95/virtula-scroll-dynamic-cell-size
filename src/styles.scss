@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+:root {
+  --text-color: #0F1115;
+  --arrow-color: #005E76;
+  --today: #EAF9F7;
+  --today-text: #57CDBF;
+  --client-name: #005E76;
+  --weekend: #EEEEF5;
+  --weekend-text: #6B6C73;
+  --ts-table-bg: #FFF;
+  --ts-table-bg-odd: #F7F7FA;
+  --ts-border: #D3D3E1;
+  --ts-border-odd: #D3D3E1;
+  --ts-color-cell: #595966FF;
+  --text-color-medium: #6B6C73;
+  --day-green: #AFF4C6;
+  --day-dismissal: #A3A3BA;
+  --day-non-paid: #FDFFA3;
+  --day-project-over: #FDFFA3;
+  --net-profit: #FFAE11;
+  --lesion: #FF4C25;
+  --profit: #46DB18;
+  --text-color-profit: #FFF;
+  --commercial: #9684FA;
+  --non-commercial: #FD71AF;
+  --vacation: #B9D800;
+  --second-project: #FFA800;
+  --day-off: #D77C7C;
+  --day-vacation: #CEE63B;
+  --day-by-client: #14AE5C;
+  --day-by-company: #FF4C25;
+  --day-work-off: #0D99FF;
+  --bg-rate-up: #D4FFE8;
+  --bg-rate-down: #FFCACA;
+  --bg-salsry-up: #DA1212;
+  --bg-salsry-down: #33D800;
+  --bg-overtime: #D484FA;
+  --bg-overtime-text: #FFF;
+}

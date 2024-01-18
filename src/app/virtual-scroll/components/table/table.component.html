@@ -1,0 +1,143 @@
+<div class="touch__scroll"
+     (touchstart)="scrollFn($event, 'smooth')"
+     (touchmove)="scrollFn($event, 'auto')"
+     #touchScroll></div>
+
+<cdk-virtual-scroll-viewport>
+  <table class="time-sheet">
+    <thead class="time-sheet__header">
+    <tr>
+      <th class="time-sheet__header-item sticky-pos id" rowspan="2">ID</th>
+      <th class="time-sheet__header-item sticky-pos name" rowspan="2">
+        Name
+      </th>
+      <th class="time-sheet__header-item position" rowspan="2">Position</th>
+      <th class="time-sheet__header-item grade" rowspan="2">Grade</th>
+      <th class="time-sheet__header-item location" rowspan="2">
+        Finance location
+      </th>
+      <th class="time-sheet__header-item weeks" colspan="7">
+
+        <div class="d-flex gap-5 justify-content-center">
+          <button class="date-button" (click)="switchDate(-1)">
+            <svg-icon src="assets/images/icons/carousel-arrow-prev.svg"></svg-icon>
+          </button>
+          <div class="d-flex justify-content-center gap-1" [style.width.px]="'170'">
+
+            <div>
+              {{tableService.currentRange.getValue().weekStart.format('MM/DD/YYYY')}}
+            </div>
+            <div>
+              —
+            </div>
+            <div>
+              {{tableService.currentRange.getValue().weekEnd.format('MM/DD/YYYY')}}
+            </div>
+
+          </div>
+          <button class="date-button" (click)="switchDate(1)">
+            <svg-icon src="assets/images/icons/carousel-arrow-next.svg"></svg-icon>
+          </button>
+        </div>
+
+      </th>
+      <th class="time-sheet__header-item total" colspan="15">
+        Monthly total (September 2022)
+      </th>
+    </tr>
+    <tr class="double-rows">
+      <th class="time-sheet__header-item day"
+          [class.current-date]="isCurrentDate(day)"
+          [class.weekend]="isWeekEnd(index)"
+          *ngFor="let day of currentRange; let index = index"
+      >
+        {{ day.format('dddd').substring(0, 3) }}
+        {{ day.format('DD') }}
+      </th>
+      <th class="time-sheet__header-item total-hour">Total hours</th>
+      <th class="time-sheet__header-item project">Project</th>
+      <th class="time-sheet__header-item client">Client</th>
+      <th class="time-sheet__header-item payment-plan">Payment plan</th>
+      <th class="time-sheet__header-item payment-actual">Payment actual</th>
+      <th class="time-sheet__header-item distinction">Distinction</th>
+      <th class="time-sheet__header-item rate">Rate</th>
+      <th class="time-sheet__header-item salary">Salary</th>
+      <th class="time-sheet__header-item developer-income">
+        Developer income
+      </th>
+      <th class="time-sheet__header-item net-profit">Net profit</th>
+      <th class="time-sheet__header-item unused-vacation">Unused Vacation</th>
+      <th class="time-sheet__header-item compensation-for-vacation">
+        Compensation for Vacation
+      </th>
+      <th class="time-sheet__header-item staffing-start">Staffing start</th>
+      <th class="time-sheet__header-item staffing-end">Staffing end</th>
+      <th class="time-sheet__header-item comment">Сomment</th>
+    </tr>
+    </thead>
+    <tbody class="time-sheet__body" id="tbody">
+    <tr *cdkVirtualFor="let item of arrayOfNames" [attr.id]="item.employeeInfo.id"
+        [class.odd]="(item.currentIndex) % 2">
+      <td class="time-sheet__body-item id" [attr.info]="true">
+        {{ item.employeeInfo.id }}
+      </td>
+      <td class="time-sheet__body-item info name" [attr.info]="true" #infoName>
+        {{item.employeeInfo.name}}
+                <!--                <app-employee-card [employee]="item.employeeInfo"></app-employee-card>-->
+      </td>
+      <td class="time-sheet__body-item info position" [attr.info]="true">
+        {{ item.employeeInfo.position.value }}
+      </td>
+      <td class="time-sheet__body-item info" [attr.info]="true">
+        {{ item.employeeInfo.grade }}
+      </td>
+      <td class="time-sheet__body-item info" [attr.info]="true">
+        <div class="location">
+          <span class="address">{{item.employeeInfo.location.address}}</span>
+        </div>
+      </td>
+      <td
+        class="time-sheet__body-item day"
+        [ngClass]="{
+          isWorkingDay: isWorkingDay(day)
+        }"
+        [class.closing-row]="item.closingRow"
+        [class.current-date]="isCurrentDay(index)"
+        [class.weekend]="isWeekEnd(index)"
+        *ngFor="let day of item.workHours; let index = index"
+        [attr.day]='true'
+        [attr.day-data]="JSONStringify(day)"
+      >
+        <app-day-container [renderItem]="day"></app-day-container>
+      </td>
+      <td
+        *ngFor="let el of item.totallyMonth | keyvalue : originalOrder"
+        class="time-sheet__body-item {{ el.key }} project-info"
+      >
+        <ng-container *ngTemplateOutlet="projectAboutInfo; context: {data: el.value}"></ng-container>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</cdk-virtual-scroll-viewport>
+
+
+<!-- TODO: REMOVE TO CONTAINER -->
+<ng-template #projectAboutInfo let-info="data">
+  <ng-container [ngSwitch]="info.type">
+    <ng-container *ngSwitchCase="'project'">
+      <app-project-name [informationData]="info"></app-project-name>
+    </ng-container>
+    <ng-container *ngSwitchCase="'payment'">
+      <app-payment [informationData]="info"></app-payment>
+    </ng-container>
+    <ng-container *ngSwitchCase="'rate'">
+      <app-rate [informationData]="info.data"></app-rate>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+      {{info}}
+    </ng-container>
+  </ng-container>
+</ng-template>
+

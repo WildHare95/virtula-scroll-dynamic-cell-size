@@ -1,0 +1,97 @@
+@import "src/assets/styles/variables";
+
+.day {
+  &__container {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  &__rate, &__salary {
+    margin: 1px;
+    position: absolute;
+    z-index: 1;
+
+    svg-icon {
+      display: flex;
+      height: 16px;
+      width: 16px;
+
+    }
+  }
+
+  &__rate {
+    top: 0;
+    left: 0;
+
+    &.up {
+      circle {
+        fill: $bg-rate-up;
+      }
+    }
+
+    &.down {
+      circle {
+        fill: $bg-rate-down;
+      }
+    }
+  }
+
+  &__salary {
+    bottom: 0;
+    right: 0;
+
+    &.up {
+      circle {
+        fill: $bg-salary-up;
+      }
+    }
+
+    &.down {
+      circle {
+        fill: $bg-salary-down;
+      }
+    }
+
+  }
+
+  &__hours {
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+
+    .hours {
+      width: 20px;
+      position: absolute;
+      bottom: 10%;
+      left: 15%;
+      text-align: center;
+    }
+
+    .box1 {
+      &:after {
+        content: ' ';
+        border-top: 49px solid $bg-overtime;
+        border-left: 59px solid transparent;
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .box2 {
+      width: 20px;
+      position: absolute;
+      top: 10%;
+      right: 15%;
+      text-align: center;
+      color: $bg-overtime-text;
+    }
+  }
+}

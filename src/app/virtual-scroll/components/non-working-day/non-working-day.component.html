@@ -1,0 +1,10 @@
+<div class="day__container" [ngClass]="{
+'day-off': generalInformation.dayOff,
+'vacation': generalInformation.vacation
+}">
+  <div class="day__marker" [ngClass]="{
+  'byClient': generalInformation.byClient,
+  'byCompany': !generalInformation.byClient
+  }"></div>
+  <div>{{ generalInformation.hours }}</div>
+</div>

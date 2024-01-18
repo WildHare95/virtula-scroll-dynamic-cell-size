@@ -1,0 +1,44 @@
+<div class="day__container" [class.overtime]="generalInformation.hours! > 8">
+  <ng-container *ngIf="generalInformation.rate !== 0 && !!generalInformation.rate">
+    <div class="day__rate" [ngClass]="{
+    up: generalInformation.rate === 1,
+    down: generalInformation.rate === -1
+    }">
+      <svg-icon [src]="getRateIcon(generalInformation.rate)"></svg-icon>
+    </div>
+  </ng-container>
+
+  <div class="day__hours">
+
+    <ng-container *ngIf="generalInformation.hours">
+
+      <ng-container *ngIf="generalInformation.hours === 8">
+        <span>{{ generalInformation.hours }}</span>
+      </ng-container>
+
+      <ng-container *ngIf="generalInformation.hours > 8">
+        <span class="box1"></span>
+        <div class="hours">{{ generalInformation.hours - (generalInformation.hours - 8) }}</div>
+        <span class="box2">{{ generalInformation.hours - 8}}</span>
+      </ng-container>
+
+    </ng-container>
+
+    <ng-container *ngIf="!generalInformation.hours">
+
+    </ng-container>
+
+
+
+
+  </div>
+
+  <ng-container *ngIf="generalInformation.salary !== 0 && !!generalInformation.salary">
+    <div class="day__salary" [ngClass]="{
+    up: generalInformation.salary === 1,
+    down: generalInformation.salary === -1
+    }">
+      <svg-icon [src]="getSalaryIcon(generalInformation.salary)"></svg-icon>
+    </div>
+  </ng-container>
+</div>

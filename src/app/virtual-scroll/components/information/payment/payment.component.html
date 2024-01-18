@@ -1,0 +1,10 @@
+<ng-container *ngIf="informationData">
+  <div class="payment" [ngClass]="{
+    'net-profit': !!informationData.profit,
+    'lesion': !!informationData.profit && +informationData.value < 0,
+    'profit': !!informationData.profit && +informationData.value > 500
+  }">
+    <div>$</div>
+    <div>{{informationData.value}}</div>
+  </div>
+</ng-container>

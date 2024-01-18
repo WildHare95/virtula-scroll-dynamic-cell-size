@@ -1,0 +1,267 @@
+//$dark: var(--text-color);
+//
+//$bg-nav-bar: var(--bg-nav-bar);
+//$bg-menu: var(--bg-menu);
+//
+//$aqua-100: var(--aqua-100);
+//$aqua-hover: var(--aqua-hover);
+//
+//$primary-light: var(--primary-light);
+//
+//$text-light: var(--text-light);
+//$text-color-light-100: var(--text-color-light-100);
+
+//$text-color-disable: var(--text-color-disable);
+//
+//$bg-dropdown-menu: var(--bg-dropdown-menu);
+//$bg-dropdown-menu-hover: var(--bg-dropdown-menu-hover);
+//$bg-dropdown-menu-active: var(--bg-dropdown-menu-active);
+//$background-search-10: var(--background-search-10);
+//$bg-dropdown-menu-light: var(--bg-dropdown-menu-light);
+//$text-color-light-100: var(--text-color-light-100);
+//$bg-dropdown-button-disable: var(--bg-dropdown-button-disable);
+//$dropdown-menu-hover-border: var(--dropdown-menu-hover-border);
+//
+//
+//$bg-dropdown-menu-filters: var(--bg-dropdown-menu-filters);
+//$bg-dropdown-menu-filters-hover: var(--bg-dropdown-menu-filters-hover);
+//
+//$box-shadow: var(--box-shadow);
+//$box-shadow-100: var(--box-shadow-100);
+//$box-shadow-200: var(--box-shadow-200);
+//
+//$arrow-color: var(--arrow-color);
+//
+//$light: var(--bg-color);
+//$light-100: var(--light-100);
+//
+//$arrow-color: var(--arrow-color);
+//
+//$bg-card: var(--bg-card);
+//$bg-card-table: var(--bg-card-table);
+//
+//$box-shadow-card: var(--box-shadow-card);
+//
+//
+//$bg-bage: var(--bg-bage);
+//$bg-office-bage: var(--bg-office-bage);
+//$bg-subcontract-bage: var(--bg-subcontract-bage);
+//$bg-remote-bage: var(--bg-remote-bage);
+//
+//$page-counter: var(--page-counter);
+//$current-page: var(--current-page);
+//$page-hover: var(--page-hover);
+//
+//$contact-icon: var(--contact-icon);
+//$bg-reset-button: var(--bg-reset-button);
+//
+//$bg-svg: var(--bg-svg);
+//$bg-svg-grayscale: var(--bg-svg-grayscale);
+//
+//$border-solid: var(--border-solid);
+//
+//$scroll-thumb: var(--scroll-thumb);
+//$scroll-track: var(--scroll-track);
+//
+//$bg-active-tab: var(--bg-active-tab);
+//$border-tab-color: var(--border-tab-color);
+//
+//$bg-modal: var(--bg-modal);
+//$delete-button-modal: var(--delete-button-modal);
+//
+//$cancel-button-bg: var(--cancel-button-bg);
+//$cancel-button-hover: var(--cancel-button-hover);
+//$cancel-button-active: var(--cancel-button-active);
+//$cancel-button-text: var(--cancel-button-text);
+//
+//$tab-hover: var(--tab-hover);
+//$table-color: var(--table-color);
+//$table-hover-head: var(--table-hover-head);
+//$table-active-head: var(--table-active-head);
+//$dropdown-menu-hover: var(--dropdown-menu-hover);
+//
+//$breadcrumb-bg: var(--breadcrumb-bg);
+//$breadcrumb-text: var(--breadcrumb-text);
+//$breadcrumb-border: var(--breadcrumb-border);
+//$breadcrumb-hover: var(--breadcrumb-hover);
+//
+//
+//$light-200: #E6EFF1;
+//$light-shadow: #f0f0f9;
+//$light-300: #FBFBFD;
+//$light-400: #FAFAFC;
+//$light-500: #ECEFFF;
+//$light-600: #D3D3E1;
+//
+//$red: #da1212;
+//
+//$white: #fff;
+//$white-300: #F6F6F8;
+//$white-shadow: #d8deeb;
+//
+//$primary: #005e76;
+//$primary-100: #0a738a;
+//$turquoise: #34c6d8;
+//
+//$black: #000;
+//$black-100: #3D3F43;
+//$black-200: #6B6C73;
+//$black-300: #212529;
+//
+//$blue: #0060E0;
+//$blue-100: #E3F2F7;
+//$blue-200: #35C6D7;
+//
+//$gray: #a3a3ba;
+//$gray-100: #eaeef4;
+//$gray-300: #83838D;
+//
+//$light-white: #BCEDFF;
+//$light-white-100: #F7F7FA;
+//
+//$aqua: #34c6d8;
+//$aqua-100: #50A0AF;
+//$white-200: #d8deeb;
+//
+//$gray: #a3a3ba;
+//$gray-100: #6b6c73;
+//$gray-200: #727281;
+//$gray-300: #83838D;
+//$gray-400: #EAEAEE;
+//$gray-500: #848495;
+//$gray-600: #F1F1F5;
+//$gray-700: var(--gray-700);
+//$gray-800: var(--gray-800);
+//
+//$blue: #b1e3ef;
+//$blue-100: #E3F2F7;
+//$blue-200: #DFFAFD;
+//$blue-300: #EFFCFE;
+//
+//$orange: #ff8000;
+//$orange-100: #fe5c18;
+//
+//$green-100: #00c126;
+//$green-200: #65f045;
+//
+//$skill-level-low: #7BDCEA;
+//$skill-level-low-plus: #72E2BA;
+//$skill-level-medium: #F4ED48;
+//$skill-level-medium-plus: #72E2BA;
+//$skill-level-height: #EC8071;
+//$skill-level-default: #F3F4F8;
+//$skill-level-none: #D9DBE1;
+//
+//$input-border: var(--input-border);
+//$input-placeholder: var(--input-placeholder);
+//$input-background: var(--input-background);
+//
+//
+//
+///* -__ __--_---___--- */
+//
+//$icon-loupe: var(--icon-loupe);
+//$linkColor: var(--linkColor);
+//$input-shadow: var(--input-shadow);
+//$tag-hover: var(--tag-hover);
+//$bage-hiring-text: var(--bage-hiring-text);
+//$bage-hiring-bg: var(--bage-hiring-bg);
+//$bage-probation-start-bg: var(--bage-probation-start-bg);
+//
+//
+//$bage-probation-completed-text: var(--bage-probation-completed-text);
+//$bage-probation-completed-bg: var(--bage-probation-completed-bg);
+//
+//$bage-dissmissal-text: var(--bage-dissmissal-text);
+//
+//$bage-probation-faild-text: var(--bage-probation-faild-text);
+//
+//$text-color-secondary: var(--text-color-secondary);
+//
+//$box-shadow-secondary: var(--box-shadow-secondary);
+//$news-hover: var(--news-hover);
+//$border-secondary: var(--border-secondary);
+//$border-secondary-active: var(--border-secondary-active);
+//$text-color-medium-secondary: var(--text-color-medium-secondary);
+//
+//$text-office-bage: var(--text-office-bage);
+//$text-upper-bage: var(--text-upper-bage);
+//$text-green-bage: var(--text-green-bage);
+//$text-green-light: var(--text-green-light);
+//$text-green-bg: var(--text-green-bg);
+//$text-red-light: var(--text-red-light);
+//$text-red-bg: var(--text-red-bg);
+//$status-filter: var(--status-filter);
+//$text-gray-bg: var(--text-gray-bg);
+//$text-orange-bage: var(--text-orange-bage);
+//$badge-terminated-text: var(--badge-terminated-text);
+//$text-pink-bage: var(--text-pink-bage);
+//$text-senior-bage: var(--text-senior-bage);
+//$text-subcontract-bage: var(--text-subcontract-bage);
+//
+//$active-node-bg: var(--active-node-bg);
+//$node-border: var(--node-border);
+//$node-border-secondary: var(--node-border-secondary);
+//$node-link-hover: var(--node-link-hover);
+//$node-arrow: var(--node-arrow);
+//
+//$add-button: var(--add-button);
+//$add-button-shadow: var(--add-button-shadow);
+//$add-button-active: var(--add-button-active);
+//$add-button-active-shadow: var(--add-button-active-shadow);
+//
+//$cancel-button-bg: var(--cancel-button-bg);
+//$cancel-button-hover: var(--cancel-button-hover);
+//$cancel-button-active: var(--cancel-button-active);
+//$cancel-button-text: var(--cancel-button-text);
+//$regalia-opacity: var(--regalia-opacity);
+//
+//$skeloton-loader-circle: var(--skeloton-loader-circle);
+//
+//
+//$dark-mode: var(--dark-mode);
+//$datepicker-bg: var(--datepicker-bg);
+//
+//
+//$bg-button: var(--bg-button);
+
+/*TIME SHEET*/
+$text-color-medium: var(--text-color-medium);
+$dark: var(--text-color);
+$arrow-color: var(--arrow-color);
+$ts-table-bg: var(--ts-table-bg);
+$ts-table-bg-odd: var(--ts-table-bg-odd);
+$ts-border: var(--ts-border);
+$ts-border-odd: var(--ts-border-odd);
+$ts-color-cell: var(--ts-color-cell);
+$client-name: var(--client-name);
+$today: var(--today);
+$today-text: var(--today-text);
+$weekend: var(--weekend);
+$weekend-text: var(--weekend-text);
+$day-green: var(--day-green);
+$day-dismissal: var(--day-dismissal);
+$day-non-paid: var(--day-non-paid);
+$day-project-over: var(--day-project-over);
+$day-green: var(--day-green);
+$net-profit: var(--net-profit);
+$lesion: var(--lesion);
+$profit: var(--profit);
+$text-color: var(--text-color-profit);
+$footer-bg: var(--footer-bg);
+$commercial: var(--commercial);
+$non-commercial: var(--non-commercial);
+$vacation: var(--vacation);
+$second-project: var(--second-project);
+$day-off: var(--day-off);
+$day-vacation: var(--day-vacation);
+$day-by-client: var(--day-by-client);
+$day-by-company: var(--day-by-company);
+$bg-rate-up: var(--bg-rate-up);
+$bg-rate-down: var(--bg-rate-down);
+$bg-salary-up: var(--bg-salsry-up);
+$bg-salary-down: var(--bg-salsry-down);
+$bg-overtime: var(--bg-overtime);
+$bg-overtime-text: var(--bg-overtime-text);
+
+

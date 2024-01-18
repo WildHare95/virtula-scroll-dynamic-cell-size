@@ -1,0 +1,11 @@
+<div class="rate__container">
+    <div class="rate__item" *ngFor="let item of informationData">
+        <div>{{item.date | date: 'YYYY-MM-dd'}}</div>
+        <div class="rate__amount" [ngClass]="{
+            'increase': item.rate === 1,
+            'decrease': item.rate === -1,
+            'stable': item.rate === 0
+            
+        }">$ {{ item.amount }}</div>
+    </div>
+</div>

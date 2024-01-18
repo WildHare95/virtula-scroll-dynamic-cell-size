@@ -1,0 +1,354 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+:host {
+  display: block;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: $ts-table-bg;
+}
+
+.time-sheet {
+  .odd {
+    background: $ts-table-bg-odd;
+
+    .time-sheet__body-item {
+      border-right-color: $ts-border-odd;
+      border-bottom-color: $ts-border-odd;
+
+      &.day,
+      &.project-info {
+        border-top-color: $ts-border-odd;
+      }
+    }
+
+    .name,
+    .id {
+      background: $ts-table-bg-odd;
+    }
+  }
+
+  .id {
+    position: sticky;
+    left: 0;
+    z-index: 11;
+    background: $ts-table-bg;
+    border-left-width: 1px;
+  }
+
+  .name {
+    position: sticky;
+    z-index: 10;
+    left: 49px;
+    background: $ts-table-bg;
+  }
+
+  &__header {
+    height: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    color: $text-color-medium;
+
+    &-item {
+      padding: 15px;
+      border: solid $ts-border 1px;
+      border-left-width: 0;
+
+      &.id {
+        min-width: 44px;
+      }
+
+      &.name {
+        min-width: 289px;
+      }
+
+      &.position,
+      &.grade {
+        min-width: 164px;
+      }
+
+      &.location {
+        min-width: 222px;
+      }
+
+      &.weeks {
+        padding: 13px 10px;
+        min-width: 420px;
+        height: 50px;
+        border-bottom-width: 0;
+      }
+
+      &.day {
+        padding: 10px;
+        min-width: 60px;
+        height: 50px;
+      }
+
+      &.total {
+        padding: 10px;
+        height: 50px;
+        border-bottom-width: 0;
+      }
+    }
+
+    .double-rows {
+      .time-sheet__header-item {
+        padding: 8px 15px;
+        line-height: 22px;
+        vertical-align: top;
+
+        &.weekend {
+          color: $weekend-text;
+          background: $weekend;
+        }
+
+        &.current-date {
+          background: $today;
+          color: $today-text;
+          position: relative;
+
+          &:after {
+            background: $today-text;
+
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 3px;
+            content: ' ';
+          }
+        }
+
+        &.day {
+          text-align: center;
+        }
+      }
+
+      .total-hour {
+        min-width: 104px;
+      }
+
+      .project {
+        min-width: 200px;
+      }
+
+      .client {
+        min-width: 165px;
+      }
+
+      .payment {
+        &-plan,
+        &-actual {
+          line-height: 16px;
+          padding-top: 7px;
+          padding-bottom: 9px;
+          text-align: end;
+          min-width: 100px;
+        }
+      }
+
+      .distinction {
+        min-width: 100px;
+      }
+
+      .rate {
+        min-width: 220px;
+      }
+
+      .salary {
+        min-width: 85px;
+      }
+
+      .developer-income {
+        line-height: 16px;
+        padding-top: 7px;
+        padding-bottom: 9px;
+        text-align: end;
+        min-width: 100px;
+      }
+
+      .net-profit {
+        min-width: 90px;
+        line-height: 16px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .unused-vacation {
+        line-height: 16px;
+        min-width: 85px;
+        text-align: end;
+      }
+
+      .compensation-for-vacation {
+        text-align: end;
+        line-height: 16px;
+        min-width: 122px;
+      }
+
+      .staffing {
+        &-start,
+        &-end {
+          min-width: 115px;
+          line-height: 16px;
+        }
+      }
+
+      .comment {
+        min-width: 240px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  &__body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $ts-color-cell;
+
+    &-item {
+      height: 50px;
+      border-color: $ts-border;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-right-width: 1px;
+
+      &.id {
+        padding-top: 15px;
+        padding-right: 5px;
+        vertical-align: top;
+        text-align: end;
+        max-width: 49px;
+        min-width: 49px;
+      }
+
+      &.info {
+        vertical-align: top;
+        padding: 15px;
+        padding-bottom: 0;
+        transition: box-shadow .5s;
+      }
+
+      &.position {
+        min-width: 210px;
+      }
+
+      &.day {
+        height: 50px;
+        padding: 0;
+
+        &.weekend {
+          color: $weekend-text;
+          background: $weekend;
+        }
+
+        &.current-date {
+          background: $today;
+        }
+
+        cursor: default;
+
+        &.isWorkingDay{
+          cursor: pointer;
+        }
+        //border: none
+      }
+
+      .location {
+        width: 185px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+
+        .country-icon {
+          width: 16px;
+          height: 10px;
+        }
+
+        .address {
+          display: block;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+
+      &.project-info {
+        text-wrap: nowrap;
+        &.totalHours {
+          text-align: end;
+          padding: 0 15px;
+        }
+
+        &.client {
+
+          color: $client-name;
+          padding: 0 15px;
+        }
+
+        &.netProfit {
+          padding: 0;
+        }
+
+        &.staffingEnd, &.staffingStart, &.comment, &.unusedVacation {
+          padding-left: 15px;
+        }
+      }
+
+    }
+  }
+}
+
+cdk-virtual-scroll-viewport {
+  height: 100vh;
+}
+
+
+.date-button {
+  @include removeButtonStyles
+}
+
+
+.touch__scroll {
+  position: absolute;
+  height: 100%;
+  width: 38px;
+  opacity: .5;
+  right: 0;
+  z-index: -1;
+}
+
+@media (pointer:coarse) {
+  .touch__scroll {
+    z-index: 1;
+  }
+}
+
+.skeleton {
+  &__container {
+    background: $ts-table-bg;
+    padding: 40px 15px;
+    height: calc(100vh - 117px);
+  }
+
+  &__item {
+    display: flex;
+    gap: 30px;
+
+    &:nth-child(2) {
+      gap: 77px;
+    }
+
+    &:nth-child(3) {
+      gap: 124px;
+    }
+  }
+
+}

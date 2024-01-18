@@ -1,0 +1,12 @@
+@import "src/assets/styles/variables";
+
+.table {
+  &__component {
+    padding: 40px;
+  }
+
+  &__title {
+    padding: 20px;
+    color: $dark;
+  }
+}

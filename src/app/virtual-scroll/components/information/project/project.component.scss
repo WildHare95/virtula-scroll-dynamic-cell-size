@@ -1,0 +1,133 @@
+@import "src/assets/styles/variables";
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.project-type {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  height: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+
+  div {
+    cursor: pointer;
+  }
+
+  &.commercial {
+    color: $commercial;
+  }
+
+  &.non-commercial {
+    color: $non-commercial;
+  }
+
+  &.vacation {
+    color: $vacation;
+  }
+
+  &.second-project {
+    color: $second-project;
+  }
+}
+
+.legend {
+  &__container {
+
+    .modal__item {
+      min-height: auto;
+      height: auto;
+      line-height: 20px;
+      justify-content: normal;
+      gap: 20px;
+
+    }
+
+    .modal__container {
+      padding: 0 10px 15px 0;
+      background: none;
+    }
+
+    .modal__item-label {
+      font-size: 12px;
+      line-height: 20px;
+      gap: 10px;
+    }
+
+    .modal__item-label {
+      width: 70px;
+    }
+
+    .modal__item-content {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 20px;
+      width: 130px;
+      color: $dark;
+
+      &.name {
+        color: $arrow-color;
+      }
+    }
+
+    .border-solid {
+      height: 2px;
+      width: 100%;
+      background: $footer-bg;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 10px;
+  }
+
+  &__image {
+    width: 30px;
+    height: 30px;
+  }
+  &__project-name {
+    color: $second-project;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  &__footer {
+    position: absolute;
+    left: 0;
+    top: calc(100% - 5px);
+    background: red;
+    height: 40px;
+    width: 100%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: $footer-bg;
+
+    padding: 8px 20px;
+
+    display: flex;
+    gap: 9px;
+
+    color: $text-color-medium;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+
+    .legend__image {
+      width: 23px;
+      height: 23px;
+    }
+
+  }
+}
+
